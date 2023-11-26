@@ -1,0 +1,31 @@
+Jogo escolhido: Jogo da Velha.
+
+Objetivo do Jogo:
+
+    * O objetivo do jogo é fazer uma sequência de três símbolos iguais, seja em linha vertical, horizontal ou diagonal, enquanto tenta impedir que seu adversário faça o mesmo.
+    * Ganha o jogo o jogador que fizer a primeira sequência de três símbolos iguais.
+
+Formulação do problema:
+
+    * Utilização do algorítmo Minimax.
+    * Estado inicial: 9 posições possíveis
+    * Estado final: algorítmo chega em um estado terminal onde sua pontuação resulta em 1, ou seja, algorítmo ganhou o jogo.
+
+    * Execução do algorítmo:
+        - Criada uma árvore de jogas possíveis.
+            - Cada nó representa uma jogada.
+            - Cada linha representa um turno (Jogador humano X Jogador robo).
+            - Para o jogo da Velha, o total de nós é igual a 255.168.
+        - Resultados terminais:
+            - -1 = Algorítmo perdeu
+            - 1 = Algorítmo ganhou
+            - 0 = Empate
+        - Objetivo do minimax neste contexto é explorar todos os nós, verificando se o jogador ganhou, perdeu ou empatou.
+        - O algorítmo então sobe um nó e verifica de quem é a vez de jogar (AI ou Jogador).
+            - Caso seja o jogador, o algorítmo prioriza a jogada que resulta no menor valor (Min) possível para o jogador.
+            - Caso seja a vez da AI, o algorítmo prioriza a jogada com valor máximo (Max)
+        
+    * Tipo de jogo: Determinístico.
+        - Limitado a quantidade de jogadas possíveis (9 jogadas).
+
+    * Solução escolhida: Minimax.
